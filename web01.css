@@ -4,39 +4,48 @@
     background-size:cover;
     height: 1000px;
 }
- .banner{
-    display: grid; 
-    grid-template-columns: repeat(2,1fr);
-} 
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.7);
+    padding: 0px ;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
 ul {
     display: flex;
-    flex-direction: row; /* cái này thực ra mặc định rồi */
+    flex-wrap: wrap;
     gap: 20px;
-    list-style: none;
-    padding: 0;
 }
 ul li {
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
     color: white;
+    font-size: 20px;
+    font-weight: 500;
 }
-a{
-    color:white;
-    font-size: 25px;
-}
-a:hover{
+ul li a:hover {
     color: pink;
 }
-.logo{
-   padding: 5px;
-    margin: 10px;
-    width: 110px;
-    height:110px; 
+body {
+    padding-top: 10px; 
 }
 /* GIỚI THIỆU VỀ NHÓM  */
 .container-1{
     padding: 80px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     overflow: hidden;
     background-color: black;
 }
@@ -45,7 +54,7 @@ a:hover{
     transition: transform 0.5s ease-in-out; 
 }
 .container-1 img:hover{
-    transform: scale(2) rotate(10deg);
+    transform: scale(1.5) rotate(10deg);
 }
 .container-2{
     display: grid;
@@ -53,6 +62,7 @@ a:hover{
     color: white;
     background-color: black;
     padding:20px;
+    align-items: center;
 }
 .container-2 img{
     max-width: 100%;
@@ -62,8 +72,8 @@ a:hover{
     transform:scale(0.5) ;
 }
 button{
-    background-color: rgb(227, 227, 185);
-    color: white;
+    background-color: gray;
+    color: gray;
     border:0;
     border-width: 25px;
     border-radius: 15px;
@@ -71,6 +81,7 @@ button{
 }
 button:hover {
     background-color: white;
+    color: black;
 }
 .main-2{
     background-color: black;
@@ -90,21 +101,13 @@ button:hover {
     justify-content:right;
     align-items: center;
 }
-.mem2{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-.item-1{
-    flex-grow: 2;
-}
-.mem2 img{
-    max-width: 100%;
-}
 .mem1 img{
-    max-width: 100%;
+    max-width: 80%;
+    transition: transform 0.5s ease;
+}
+
+.mem1 img:hover {
+  transform: scale(1.2);
 }
 /* GIỚI THIỆU VỀ SẢN PHẨM */
 .main-4{
@@ -121,14 +124,64 @@ button:hover {
     margin: 40px;
     justify-content: center;
 }
+.main-6{
+     width:80%; 
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto auto auto;
+    gap:25px;
+}
+.main-2 input{
+    width:80%;
+    padding:18px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+} 
+.item-17{ grid-column:1; grid-row:1; }
+.item-18{ grid-column:1; grid-row:2; }
+.item-19{ grid-column:1; grid-row:3; }
+
+.item-20{
+    grid-column:2;
+    grid-row:1 / span 2;
+}
+.item-20 input{
+    height:150px;
+}
+.item-22{
+    grid-column:2;
+    grid-row:3;
+}
+
+.item-22 button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#17c1b6;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.item-22 button:hover{
+    background:#0fa8a2;
+}
 /* LIÊN HỆ  */
 .main-5{
+    background-image: url(https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/545018750_122133736940899923_1987823243665684716_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeG7nLaUDS55qHVjl-RjqnHAfyrp-_7K2QB_Kun7_srZAKc_DiOlwdNvTkZs7BtNbXAA8LZullCbvv7eTXOnl_4M&_nc_ohc=9QyhaI2-r9gQ7kNvwHPnLXk&_nc_oc=AdqqRdl9gwIuAPQIVw-asGUpopPUPiIwyaLQ6CRRk7l5912g-Uu9iCQnvurXnCEBoJw&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=upfn9u7RGF9U8rhq3lzJWw&_nc_ss=7a30f&oh=00_AfzNDcCc2FdlROwrBmqopDec6EjUCjbSKMPPcjg-NEftFQ&oe=69C2A28C);
+    background-size:cover;
     background-color: rgb(0, 0, 0);
-    padding: 100px;
+    padding: 30px;
     margin: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 30px;
     height: 100px;
+}
+a{
+    color: white;
 }
